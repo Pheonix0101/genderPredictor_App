@@ -53,15 +53,25 @@ class _HomePageState extends State<HomePage> {
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith<Color>(
                   (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.pressed))
-                      return const Color.fromARGB(255, 4, 117, 7); // Color when the button is pressed
-                    return Colors.pink; // Default color
+                    if (states.contains(MaterialState.pressed)) {
+                      return const Color.fromARGB(
+                          255, 45, 184, 49); // Color when the button is pressed
+                    }
+                    return const Color.fromARGB(
+                        255, 11, 69, 117); // Default color
                   },
                 ),
               ),
-              child: const Text('predict'),
+              child: const Text(
+                'predict',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              ),
             ),
-            if (result != null) Text(result),
+            if (result != null)
+              Text(
+                result,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+              ),
           ],
         ),
       ),
